@@ -1,13 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[7]:
+
+
+try:
+    get_ipython().system('jupyter nbconvert --to script supervisor_test.ipynb')
+    get_ipython().run_line_magic('load_ext', 'autoreload')
+    get_ipython().run_line_magic('autoreload', '2')
+except:
+    pass
+
+
 # In[1]:
 
 
 def updateCanStatus():
     for can in cans:
         x,y,z=can["translation"].getSFVec3f()
-        if(x>-0.75 and x<6.8 and y>-1.4 and y<-0.7):
+        if(x>-0.75 and x<6.8 and y>-1 and y<-0.36):
             can["status"]="CONVEYOR"
         elif(x>-0.25 and x<0.25 and y>0.48 and y<0.8):
             can["status"]="BASKET"

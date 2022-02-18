@@ -18,8 +18,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.1574115506554459 -0.9293327697379368 0.33400929150468706 5.344555848524977
-  position -2.562102116578238 0.30251942588525244 6.852044098593841
+  orientation -0.06979442424217495 -0.7928996131823032 0.6053420039614444 5.994425037572508
+  position -5.642513209960727 -0.31302082784376956 2.6102776805800776
   exposure 1.7
 }
 TexturedBackground {
@@ -112,12 +112,6 @@ Radiator {
   translation 0.528902 2.341308 0.33
   rotation 0 0 1 -1.5707963071795863
   numberOfFins 16
-}
-WoodenPalletStack {
-  translation 2.8 -0.23 0
-  rotation 0 0 1 -1.5707953071795862
-  palletNumber 5
-  palletSize 0.8 1 0.11
 }
 Cabinet {
   translation -0.41 2.47 0
@@ -358,7 +352,7 @@ UR5e {
   ]
 }
 ConveyorBelt {
-  translation 3.18 -1.05 0
+  translation 3.18 -0.7 0
   rotation 0 0 1 3.141592
   size 8 0.7 0.6
   appearance CorrugatedMetal {
@@ -458,24 +452,24 @@ DEF can6 Can {
   name "can(19)"
 }
 DEF can7 Can {
-  translation 5.7262 -1.70597 0.66
+  translation 5.7262 -0.82597 0.66
   name "can(4)"
 }
 DEF can8 Can {
-  translation 1.38576 -0.989645 0.66
+  translation 1.38576 -0.739645 0.66
   name "can(1)"
 }
 DEF can9 Can {
-  translation 2.49 -1.285 0.66
+  translation 2.49 -0.885 0.66
   name "can(5)"
 }
 DEF can10 Can {
-  translation 3.22756 -1.04127 0.66
+  translation 2.94756 -0.556301 0.66
   rotation 0 0 1 0.523599
   name "can(2)"
 }
 DEF can11 Can {
-  translation 4.30145 -1.18327 0.66
+  translation 4.30145 -0.80327 0.66
   name "can(6)"
 }
 DEF can12 Can {
@@ -483,11 +477,11 @@ DEF can12 Can {
   name "can(3)"
 }
 DEF can13 Can {
-  translation 5.34773 -0.285035 0.66
+  translation 5.34773 -0.635035 0.66
   name "can(7)"
 }
 DEF can0 Can {
-  translation 5.86383 -0.351604 0.66
+  translation 5.86383 -0.561604 0.66
   name "can(8)"
 }
 Ball {
