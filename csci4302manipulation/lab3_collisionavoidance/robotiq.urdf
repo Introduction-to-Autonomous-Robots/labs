@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<robot name="/Users/correll/Desktop/csci4302/controllers/collision avoidance/robotiq.urdf" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+  </link>
+  <link name="ROBOTIQ 3f Gripper">
+    <visual>
+      <origin xyz="0 -0.029 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.023" length="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.029 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.023" length="0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0.005 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.126 0.093 0.13"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0.005 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.126 0.093 0.13"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_link_ROBOTIQ 3f Gripper_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ROBOTIQ 3f Gripper"/>
+    <origin xyz="0 0.04 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="finger_middle_joint_1" type="revolute">
+    <parent link="ROBOTIQ 3f Gripper"/>
+    <child link="finger_middle_link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0495" upper="1.2218" velocity="100"/>
+    <origin xyz="0.045516 0.0414 0" rpy="0 0 1.57"/>
+  </joint>
+  <link name="finger_middle_link_1">
+    <visual>
+      <origin xyz="0.01231 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.01231 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_middle_joint_2" type="revolute">
+    <parent link="finger_middle_link_1"/>
+    <child link="finger_middle_link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0" upper="1.5708" velocity="100"/>
+    <origin xyz="0.05 -0.028 0" rpy="0 0 -0.52"/>
+  </joint>
+  <link name="finger_middle_link_2">
+    <visual>
+      <origin xyz="0.02694 -0.008952 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.02694 -0.008952 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_middle_joint_3" type="revolute">
+    <parent link="finger_middle_link_2"/>
+    <child link="finger_middle_link_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.2217" upper="-0.0523" velocity="100"/>
+    <origin xyz="0.039 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="finger_middle_link_3">
+    <visual>
+      <origin xyz="0.018 0.00913 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.018 0.00913 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="palm_finger_2_joint" type="revolute">
+    <parent link="ROBOTIQ 3f Gripper"/>
+    <child link="finger_2_link_0"/>
+    <axis xyz="0 1 -0.000007"/>
+    <limit effort="100" lower="-0.192" upper="0.1784" velocity="100"/>
+    <origin xyz="-0.0455 0.0214 -0.036" rpy="3.141592 -0.000008 1.571593"/>
+  </joint>
+  <link name="finger_2_link_0">
+    <visual>
+      <origin xyz="0.007 0.006 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.04 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.007 0.006 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.04 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_2_joint_1" type="revolute">
+    <parent link="finger_2_link_0"/>
+    <child link="finger_2_link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0495" upper="1.2218" velocity="100"/>
+    <origin xyz="0.02 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="finger_2_link_1">
+    <visual>
+      <origin xyz="0.012315 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.012315 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_2_joint_2" type="revolute">
+    <parent link="finger_2_link_1"/>
+    <child link="finger_2_link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0" upper="1.5708" velocity="100"/>
+    <origin xyz="0.05 -0.028 0" rpy="0 0 -0.52"/>
+  </joint>
+  <link name="finger_2_link_2">
+    <visual>
+      <origin xyz="0.02694 -0.00895 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.02694 -0.00895 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_2_joint_3" type="revolute">
+    <parent link="finger_2_link_2"/>
+    <child link="finger_2_link_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.2217" upper="-0.0523" velocity="100"/>
+    <origin xyz="0.039 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="finger_2_link_3">
+    <visual>
+      <origin xyz="0.018 0.00913 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.018 0.00913 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="palm_finger_1_joint" type="revolute">
+    <parent link="ROBOTIQ 3f Gripper"/>
+    <child link="finger_1_link_0"/>
+    <axis xyz="0 1 -0.000007"/>
+    <limit effort="100" lower="-0.1784" upper="0.192" velocity="100"/>
+    <origin xyz="-0.0455 0.0214 0.036" rpy="3.141592 -0.000008 1.571593"/>
+  </joint>
+  <link name="finger_1_link_0">
+    <visual>
+      <origin xyz="0.007 0.006 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.04 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.007 0.006 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.04 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_1_joint_1" type="revolute">
+    <parent link="finger_1_link_0"/>
+    <child link="finger_1_link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0495" upper="1.2218" velocity="100"/>
+    <origin xyz="0.02 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="finger_1_link_1">
+    <visual>
+      <origin xyz="0.012316 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.012316 -0.02039 0" rpy="0 0 -0.467371"/>
+      <geometry>
+        <box size="0.091 0.038 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_1_joint_2" type="revolute">
+    <parent link="finger_1_link_1"/>
+    <child link="finger_1_link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0" upper="1.5708" velocity="100"/>
+    <origin xyz="0.05 -0.028 0" rpy="0 0 -0.52"/>
+  </joint>
+  <link name="finger_1_link_2">
+    <visual>
+      <origin xyz="0.02694 -0.00895 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.02694 -0.00895 0" rpy="0 0 -0.012556"/>
+      <geometry>
+        <box size="0.04 0.032 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="finger_1_joint_3" type="revolute">
+    <parent link="finger_1_link_2"/>
+    <child link="finger_1_link_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.2217" upper="-0.0523" velocity="100"/>
+    <origin xyz="0.039 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="finger_1_link_3">
+    <visual>
+      <origin xyz="0.018004 0.009133 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.018004 0.009133 0" rpy="0 0 0.520259"/>
+      <geometry>
+        <box size="0.035 0.018 0.032"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

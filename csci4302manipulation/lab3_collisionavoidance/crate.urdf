@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="/Users/correll/Desktop/csci4302/controllers/collision avoidance/crate.urdf" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+  </link>
+  <link name="crate">
+    <visual>
+      <origin xyz="0 0 0.0035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.5 0.35 0.007"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.5 0.35 0.007"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0.168875 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.465 0.01225 0.193"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0.168875 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.465 0.01225 0.193"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 -0.168875 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.465 0.01225 0.193"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.168875 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.465 0.01225 0.193"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.24125 0 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0175 0.35 0.193"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.24125 0 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0175 0.35 0.193"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.24125 0 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0175 0.35 0.193"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.24125 0 0.1035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.0175 0.35 0.193"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_link_crate_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="crate"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+</robot>
