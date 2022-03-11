@@ -455,4 +455,5 @@ DEF Marker SolidBox {
   rotation -0.011844038021802679 -0.9556273662739816 0.29434003396003 0.040492929355314546
   name "box(4)"
   size 0.08 0.02 0.02
+  enableBoundingObject FALSE
 }
