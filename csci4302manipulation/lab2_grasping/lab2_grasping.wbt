@@ -18,8 +18,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.06979442424217495 -0.7928996131823032 0.6053420039614444 5.994425037572508
-  position -5.642513209960727 -0.31302082784376956 2.6102776805800776
+  orientation -0.027767820705103783 -0.9990359712578122 0.03400112154399187 4.9126911120502
+  position -0.25937583509786943 -0.9778988641349009 4.491026207685154
   exposure 1.7
 }
 TexturedBackground {
@@ -328,6 +328,10 @@ UR5e {
   controller "<extern>"
   selfCollision FALSE
   toolSlot [
+    DistanceSensor {
+      translation 0 0.08 0
+      rotation 0 0 1 1.5707996938995747
+    }
     RangeFinder {
       translation 0 0.09 0
       rotation 0 0 1 1.57
