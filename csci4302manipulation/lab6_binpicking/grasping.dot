@@ -1,0 +1,21 @@
+digraph pastafarianism {
+ordering=out;
+graph [fontname="times-roman"];
+node [fontname="times-roman"];
+edge [fontname="times-roman"];
+Grasping [fillcolor=cyan, fontcolor=black, fontsize=9, label=Grasping, shape=octagon, style=filled];
+"Object in Hand?" [fillcolor=gray, fontcolor=black, fontsize=9, label="Object in Hand?", shape=ellipse, style=filled];
+Grasping -> "Object in Hand?";
+"Suppress success" [fillcolor=ghostwhite, fontcolor=black, fontsize=9, label="Suppress success", shape=ellipse, style=filled];
+Grasping -> "Suppress success";
+Moving [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ Moving", shape=box, style=filled];
+"Suppress success" -> Moving;
+"Move to Start" [fillcolor=gray, fontcolor=black, fontsize=9, label="Move to Start", shape=ellipse, style=filled];
+Moving -> "Move to Start";
+OpenGripper [fillcolor=gray, fontcolor=black, fontsize=9, label=OpenGripper, shape=ellipse, style=filled];
+Moving -> OpenGripper;
+MoveDownUntilTouch [fillcolor=gray, fontcolor=black, fontsize=9, label=MoveDownUntilTouch, shape=ellipse, style=filled];
+Moving -> MoveDownUntilTouch;
+CloseGripper [fillcolor=gray, fontcolor=black, fontsize=9, label=CloseGripper, shape=ellipse, style=filled];
+Moving -> CloseGripper;
+}
